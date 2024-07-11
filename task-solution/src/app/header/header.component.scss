@@ -1,0 +1,6 @@
+@use 'mixins';
+
+.header {
+    width: 100%;
+    @include mixins.flex-space-between;
+}

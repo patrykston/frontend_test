@@ -1,0 +1,32 @@
+@use 'mixins';
+@use 'variables';
+
+.header__icon {
+    &--background {
+        @include mixins.flex-center;
+        width: calc(variables.$header-mobile-height * 0.7);
+        height: calc(variables.$header-mobile-height * 0.7);
+        background-color: variables.$primary-logo-background-color;
+        border-radius: calc(variables.$header-mobile-height * 0.7 / 2);
+
+        &:hover {
+            background-color: variables.$primary-logo-hover-background-color;
+        }
+    }
+        
+    &--i {
+        font-size: calc(variables.$header-mobile-height * 0.5);
+    }
+    
+    @include mixins.min-width-breakpoint(768px) {
+        &--background {
+            width: calc(variables.$header-desktop-height * 0.7);
+            height: calc(variables.$header-desktop-height * 0.7);
+            border-radius: calc(variables.$header-desktop-height * 0.7 / 2);
+        }
+            
+        &--i {
+            font-size: calc(variables.$header-desktop-height * 0.5);
+        }
+    }
+}

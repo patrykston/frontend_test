@@ -1,0 +1,46 @@
+// LAYOUT STYLES - HEADER, MAIN, FOOTER
+@use 'mixins';
+@use 'variables';
+
+.app-header {
+    display: flex;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: variables.$header-mobile-height;
+    z-index: 100;
+    padding: calc(variables.$header-mobile-height * 0.1);
+    background-color: variables.$primary-header-background-color;
+    // @include mixins.flex-center;
+
+    @include mixins.min-width-breakpoint(768px) {
+        height: variables.$header-desktop-height;
+        padding: 1.5rem;
+    }
+}
+
+.main {
+    margin-top: calc(variables.$header-mobile-height);
+    min-height: calc(100vh - (variables.$header-mobile-height + variables.$footer-mobile-height));
+    padding: 1rem;
+
+    @include mixins.min-width-breakpoint(768px) {
+        margin-top: calc(variables.$header-desktop-height);
+        min-height: calc(100vh - (variables.$header-desktop-height + variables.$footer-desktop-height));
+        padding: 2rem;
+    }
+}
+
+.footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: variables.$footer-mobile-height;
+    padding: 0.5rem;
+    background-color: variables.$primary-footer-background-color;
+
+    @include mixins.min-width-breakpoint(768px) {
+        height: variables.$footer-desktop-height;
+        padding: 1.5rem;
+    }
+}

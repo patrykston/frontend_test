@@ -1,0 +1,7 @@
+@use 'typography';
+
+.header__text {
+    &--bold {
+        font-weight: typography.$bold-font-weight;
+    }
+}
