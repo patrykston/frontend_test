@@ -1,0 +1,16 @@
+@use 'mixins';
+
+.footer {
+    width: 100%;
+    @include mixins.flex-space-between;
+
+    app-footer-info {
+        display: none;
+    }
+
+    @include mixins.min-width-breakpoint(768px) {
+        app-footer-info {
+            display: block;
+        }
+    }
+}

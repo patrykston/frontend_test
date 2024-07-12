@@ -1,0 +1,103 @@
+@use 'mixins';
+@use 'variables';
+
+.arrow {
+    border: solid variables.$button-text-color;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transition: 1s ease;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.footer__button {
+    width: calc(variables.$footer-mobile-height * 1.7);
+    background-color: variables.$primary-footer-background-color;
+    color: variables.$button-text-color;
+    padding: 0.8rem;
+    border: variables.$footer-border;
+    border-radius: 0.2rem;
+    @include mixins.flex-center;
+
+    &:hover {
+        color: variables.$button-text-hover-color;
+        border: variables.$button-hover-border;
+        cursor: pointer;
+        transition: 1s ease;
+        .arrow {
+            border: solid variables.$button-text-hover-color;
+            border-width: 0 3px 3px 0;
+        }
+    }
+
+    &:focus {
+        color: variables.$button-text-hover-color;
+        border: variables.$button-hover-border;
+        .arrow {
+            border: solid variables.$button-text-hover-color;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transition: 1s ease;
+        }
+    }
+
+    &:focus + &--options {
+        visibility: visible;
+        bottom: variables.$footer-mobile-height;
+        
+    }
+
+    &--text {
+        padding-right: 1rem;
+    }
+
+    &--options {
+        width: calc(variables.$footer-mobile-height * 1.7);
+        background-color: variables.$secondary-background-color;
+        box-shadow: variables.$primary-box-shadow;
+        border-radius: 0.1rem 0.1rem 0rem 0rem;
+        position: absolute;
+        bottom: 0;
+        padding: 1rem;
+        visibility: hidden;
+        transition: bottom 0.5s ease-in-out;
+    }
+
+    &--option {
+        color: variables.$footer-button-text-color;
+        background: none;
+        border: none;
+        font-size: 0.8rem;
+
+        &:hover {
+            color: variables.$footer-button-hover-text-color;
+            cursor: pointer;
+            transition: 0.5s ease;
+
+            .arrow {
+                border: solid variables.$footer-button-hover-text-color;
+                border-width: 0 3px 3px 0;
+                transition: 0.5s ease;
+            }
+        }
+
+        .arrow {
+            border: solid variables.$footer-button-text-color;
+            border-width: 0 3px 3px 0;
+        }
+
+        &--text {
+            padding-left: 1rem;
+        }
+    }
+}

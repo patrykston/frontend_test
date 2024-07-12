@@ -11,6 +11,8 @@
 
         &:hover {
             background-color: variables.$primary-logo-hover-background-color;
+            cursor: pointer;
+            transition: 0.5s ease;
         }
     }
         

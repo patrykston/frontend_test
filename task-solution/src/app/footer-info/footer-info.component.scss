@@ -1,0 +1,15 @@
+@use 'mixins';
+@use 'variables';
+
+.footer__info {
+    @include mixins.flex-center;
+    color: variables.$footer-info-color;
+    font-size: 1.5rem;
+
+    &--line {
+        height: 1px;
+        min-width: calc(variables.$footer-mobile-height * 0.3);
+        background: variables.$footer-info-color;
+        margin: 0 0.5rem;
+    }
+}

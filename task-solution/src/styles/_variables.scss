@@ -1,14 +1,38 @@
 // GLOBAL VARIABLES - COLORS, SIZES
 
 $primary-background-color: #2b2d35;
+$secondary-background-color: white;
 $primary-header-background-color: #0b0c0f;
-$primary-logo-background-color: #303030;
-$primary-logo-hover-background-color: #da8830;
 $primary-footer-background-color: #151619;
 $primary-color: white;
 
-$header-mobile-height: 68px;
-$footer-mobile-height: 98px;
+$primary-logo-background-color: #303030;
+$primary-logo-hover-background-color: #da8830;
 
-$header-desktop-height: 92px;
-$footer-desktop-height: 92px;
+$footer-logo-color: #28292d;
+$footer-logo-hover-border-color: #997e58;
+$footer-logo-hover-text-color: #a7abb9;
+
+$footer-button-text-color: #303030;
+$footer-button-hover-text-color: #da8830;
+
+$footer-info-color: #28292d;
+
+$button-text-color: #a4a9b7;
+$button-text-hover-color: white;
+$button-border-color: #28292d;
+$button-border-hover-color: white;
+
+$footer-border: 1px solid $footer-logo-color;
+$footer-hover-border: 1px solid $footer-logo-hover-border-color;
+
+$button-border: 1px solid $button-border-color;
+$button-hover-border: 1px solid $button-border-hover-color;
+
+$primary-box-shadow: 0px -3px 20px $footer-logo-color;
+
+$header-mobile-height: 100px;
+$footer-mobile-height: 130px;
+
+$header-desktop-height: 140px;
+$footer-desktop-height: 140px;
