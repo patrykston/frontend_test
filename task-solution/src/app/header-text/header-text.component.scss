@@ -1,7 +1,15 @@
+@use 'mixins';
 @use 'typography';
 
 .header__text {
+    @include mixins.flex-column;
+
     &--bold {
         font-weight: typography.$bold-font-weight;
+    }
+
+    &--data {
+        display: flex;
+        justify-content: flex-end;
     }
 }

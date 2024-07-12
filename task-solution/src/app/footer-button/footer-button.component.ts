@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-footer-button',
@@ -8,5 +9,13 @@ import { Component } from '@angular/core';
   styleUrl: './footer-button.component.scss'
 })
 export class FooterButtonComponent {
+  constructor(private sharedService: SharedService) {}
 
+  resetSettings() {
+    this.sharedService.changeText('');
+  }
+
+  sendPersonalData() {
+    this.sharedService.changeText('Patryk Stoń');
+  }
 }
