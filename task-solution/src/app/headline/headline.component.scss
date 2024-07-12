@@ -1,0 +1,25 @@
+@use 'mixins';
+@use 'typography';
+@use 'variables';
+
+.headline {
+    @include mixins.flex-column-center;
+
+    &__text {
+        font-weight: typography.$light-font-weight;
+        font-size: 1.5rem;
+    }
+
+    &__line {
+        width: 80%;
+        background: variables.$secondary-background-color;
+        margin: 1rem 0;
+        height: 1px;
+    }
+
+    @include mixins.min-width-breakpoint(768px) {
+        &__text {
+            font-size: 2rem;
+        }
+    }
+}

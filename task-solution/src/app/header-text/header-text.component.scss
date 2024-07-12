@@ -11,5 +11,10 @@
     &--data {
         display: flex;
         justify-content: flex-end;
+        font-weight: typography.$light-font-weight;
+    }
+
+    @include mixins.min-width-breakpoint(768px) {
+        font-size: 1.5rem;
     }
 }

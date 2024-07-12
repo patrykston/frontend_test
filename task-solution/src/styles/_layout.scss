@@ -19,6 +19,8 @@
 }
 
 .main {
+    display: flex;
+    width: 100%;
     margin-top: calc(variables.$header-mobile-height);
     min-height: calc(100vh - (variables.$header-mobile-height + variables.$footer-mobile-height));
     padding: 1rem;
@@ -28,12 +30,19 @@
         min-height: calc(100vh - (variables.$header-desktop-height + variables.$footer-desktop-height));
         padding: 2rem;
     }
+    
+    app-home {
+        @include mixins.flex-column-center;
+        min-width: 0;
+        width: 100%;
+    }
 }
 
 .app-footer {
     display: flex;
     bottom: 0;
-    position: absolute;
+    position: relative;
+    // position: fixed;
     width: 100%;
     height: variables.$footer-mobile-height;
     z-index: 100;

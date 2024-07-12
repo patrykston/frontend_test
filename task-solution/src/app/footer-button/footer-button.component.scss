@@ -54,7 +54,6 @@
     &:focus + &--options {
         visibility: visible;
         bottom: variables.$footer-mobile-height;
-        
     }
 
     &--text {
@@ -99,6 +98,13 @@
 
         &--text {
             padding-left: 1rem;
+        }
+    }
+
+    @include mixins.min-width-breakpoint(768px) {
+        &:focus + &--options {
+            visibility: visible;
+            bottom: variables.$footer-desktop-height;
         }
     }
 }
