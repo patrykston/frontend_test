@@ -11,6 +11,9 @@
     @include mixins.min-width-breakpoint(768px) {
         app-footer-info {
             display: block;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 }
