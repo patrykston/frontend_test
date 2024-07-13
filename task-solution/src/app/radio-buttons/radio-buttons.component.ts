@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormsModule, FormBuilder, FormGroup } from '@angular/forms';
+import { Component} from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-radio-buttons',
@@ -8,15 +9,14 @@ import { FormsModule, FormBuilder, FormGroup } from '@angular/forms';
   templateUrl: './radio-buttons.component.html',
   styleUrl: './radio-buttons.component.scss'
 })
-export class RadioButtonsComponent implements OnInit {
+export class RadioButtonsComponent{
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private sharedService: SharedService) {}
 
-  public radioButtonReactiveForm: FormGroup | undefined;
+  selectedOption: string = '0';
 
-  selectedOption: string | undefined
-
-  ngOnInit() {
-    this.selectedOption = '0';
+  updateOption(value: string) {
+    this.selectedOption = value;
+    this.sharedService.setOption(this.selectedOption);
   }
 }

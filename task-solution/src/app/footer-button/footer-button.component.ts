@@ -13,6 +13,13 @@ export class FooterButtonComponent {
 
   resetSettings() {
     this.sharedService.changeText('');
+    const radioButtons = document.querySelectorAll('input[name="option"]');
+    radioButtons.forEach(radio => {
+      (radio as HTMLInputElement).checked = false;
+    });
+    this.sharedService.setOption('0');
+    this.sharedService.changeData('');
+    this.sharedService.resetShowedData();
   }
 
   sendPersonalData() {
