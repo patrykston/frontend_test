@@ -12,7 +12,7 @@
 .up {
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
-    transition: 1s ease;
+    transition: variables.$ease-transition;
 }
 
 .right {
@@ -33,7 +33,7 @@
         color: variables.$button-text-hover-color;
         border: variables.$button-hover-border;
         cursor: pointer;
-        transition: 1s ease;
+        transition: variables.$ease-transition;
         .arrow {
             border: solid variables.$button-text-hover-color;
             border-width: 0 3px 3px 0;
@@ -48,7 +48,7 @@
             border-width: 0 3px 3px 0;
             transform: rotate(45deg);
             -webkit-transform: rotate(45deg);
-            transition: 1s ease;
+            transition: variables.$ease-transition;
         }
     }
 
@@ -84,12 +84,12 @@
         &:hover {
             color: variables.$footer-button-hover-text-color;
             cursor: pointer;
-            transition: 0.5s ease;
+            transition: variables.$quick-ease-transition;
 
             .arrow {
                 border: solid variables.$footer-button-hover-text-color;
                 border-width: 0 3px 3px 0;
-                transition: 0.5s ease;
+                transition: variables.$quick-ease-transition;
             }
         }
 

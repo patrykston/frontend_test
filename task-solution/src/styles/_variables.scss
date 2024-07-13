@@ -1,4 +1,4 @@
-// GLOBAL VARIABLES - COLORS, SIZES
+// GLOBAL VARIABLES - COLORS, SIZES, TRANSITIONS
 
 $primary-background-color: #2b2d35;
 $secondary-background-color: white;
@@ -44,3 +44,6 @@ $footer-mobile-height: 130px;
 
 $header-desktop-height: 140px;
 $footer-desktop-height: 140px;
+
+$ease-transition: 1s ease;
+$quick-ease-transition: 0.5s ease;
