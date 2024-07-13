@@ -8,5 +8,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './sub-headline.component.scss'
 })
 export class SubHeadlineComponent {
+  @Input() id: string = '';
   @Input() title: string = '';
 }

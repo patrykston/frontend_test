@@ -1,0 +1,55 @@
+@use 'mixins';
+@use 'typography';
+@use 'variables';
+
+.radio-buttons {
+    @include mixins.flex-column;
+    
+    &__button {
+        display: flex;
+        align-items: center;
+        padding-top: 2rem;
+
+        &--option {
+            display: none;
+        }
+
+        &--label {
+            padding-left: 2.5rem;
+            font-weight: typography.$light-font-weight;
+            position: relative;
+            cursor: pointer;
+            font-size: 1rem;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 1.8rem;
+                height: 1.8rem;
+                border: 0.25rem solid variables.$primary-color;
+                border-radius: 50%;
+                background-color: variables.$radio-button-border-color;
+                box-sizing: border-box;
+            }
+        }
+
+        &--option:checked + &--label::after {
+            content: '';
+            position: absolute;
+            left: 0.45rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0.9rem;
+            height: 0.9rem;
+            border-radius: 50%;
+            background-color: variables.$primary-color;
+        }
+
+        &--option:checked + &--label {
+            font-weight: typography.$bold-font-weight;
+        }
+    }
+}

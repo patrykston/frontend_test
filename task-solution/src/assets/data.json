@@ -1,0 +1,10 @@
+{
+    "data": [
+        {"id": "1", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
+        {"id": "2", "text": "Vestibulum viverra eros ac mollis mattis."},
+        {"id": "3", "text": "Maecenas hendrerit erat risus, non mattis odio fringilla in."},
+        {"id": "4", "text": "Pellentesque quis lobortis nulla, eu vehicula orci."},
+        {"id": "5", "text": "Nam vestibulum sapien sit amet semper volutpat."},
+        {"id": "6", "text": "Maecenas pharetra lacus vel aliquam mattis."}
+    ]
+}

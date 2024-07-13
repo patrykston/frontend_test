@@ -6,6 +6,7 @@ $primary-header-background-color: #0b0c0f;
 $primary-footer-background-color: #151619;
 $primary-color: white;
 
+
 $primary-logo-background-color: #303030;
 $primary-logo-hover-background-color: #da8830;
 
@@ -22,9 +23,15 @@ $button-text-color: #a4a9b7;
 $button-text-hover-color: white;
 $button-border-color: #28292d;
 $button-border-hover-color: white;
+$button-dark-gradient-color: #c1782a;
+$button-light-gradient-color: #f1a343;
+
+$radio-button-border-color: #2b2d35;
 
 $footer-border: 1px solid $footer-logo-color;
 $footer-hover-border: 1px solid $footer-logo-hover-border-color;
+
+$block-button-border: 1px solid $primary-color;
 
 $button-border: 1px solid $button-border-color;
 $button-hover-border: 1px solid $button-border-hover-color;

@@ -3,7 +3,7 @@
 @use 'variables';
 
 .sub-headline {
-    @include mixins.flex-column-center;
+    @include mixins.flex-column;
     width: 100%;
 
     &__text {
@@ -13,5 +13,16 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+
+    &#second-block {
+        align-items: flex-end;
+        @include mixins.min-width-breakpoint(768px) {
+            align-items: center;
+        }
+    }
+
+    @include mixins.min-width-breakpoint(768px) {
+        align-items: center;
     }
 }

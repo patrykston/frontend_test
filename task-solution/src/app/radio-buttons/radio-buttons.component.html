@@ -1,0 +1,15 @@
+<div class="radio-buttons">
+    <div class="radio-buttons__button">
+        <input class="radio-buttons__button--option" type="radio" id="option1" name="option" value="1" [(ngModel)]="selectedOption">
+        <label class="radio-buttons__button--label" for="option1">Opcja pierwsza</label>
+    </div>
+    <div class="radio-buttons__button">
+        <input class="radio-buttons__button--option" type="radio" id="option2" name="option" value="2" [(ngModel)]="selectedOption">
+        <label class="radio-buttons__button--label" for="option2">Opcja druga</label>
+    </div>
+    <div class="radio-buttons__button">
+        <input class="radio-buttons__button--option" type="radio" id="option3" name="option" value="3" [(ngModel)]="selectedOption">
+        <label class="radio-buttons__button--label" for="option3">Opcja losowa</label>
+    </div>
+</div>
+<p>Wybrana opcja: {{ selectedOption }}</p>

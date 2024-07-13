@@ -1,0 +1,44 @@
+@use 'mixins';
+@use 'typography';
+@use 'variables';
+
+.block-buttons {
+    @include mixins.flex-column;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+
+    &__button {
+        width: variables.$footer-mobile-height;
+        background-color: variables.$primary-background-color;
+        color: variables.$button-text-color;
+        font-weight: typography.$bold-font-weight;
+        border: variables.$block-button-border;
+        border-radius: 0.2rem;
+        padding: 0.6rem;
+
+        &:hover {
+            cursor: pointer;
+            background-image: linear-gradient(to right, variables.$button-dark-gradient-color, variables.$button-light-gradient-color);
+            color: variables.$primary-color;
+        }
+
+        &:first-child {
+            margin-bottom: 1rem;
+        }
+    }
+
+    @include mixins.min-width-breakpoint(768px) {
+        flex-direction: row;
+        align-items: center;
+        height: auto;
+        padding-top: 2rem;
+
+        &__button {
+            &:first-child {
+                margin-bottom: 0;
+                margin-right: 1rem;
+            }
+        }
+    }
+}
