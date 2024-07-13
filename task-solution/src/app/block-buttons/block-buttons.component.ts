@@ -28,13 +28,10 @@ export class BlockButtonsComponent implements OnInit {
 
     const d = localStorage.getItem("data")
     this.dataFromLocalStorage = d ? JSON.parse(d) : null;
-    console.log("Data from localStorage", this.dataFromLocalStorage)
     
     this.dataID = this.dataFromLocalStorage.data.map((data:any) => {
       return data.id
     })
-
-    console.log("DataID", this.dataID)
 
   }
 
@@ -68,11 +65,9 @@ export class BlockButtonsComponent implements OnInit {
         alert("Proszę najpierw wybrać opcję w bloku pierwszym")
     }
 
-    console.log(this.showedData)
   }
 
   addData() {
-    console.log(this.dataFromLocalStorage.data)
     this.unshownData = this.dataID.filter((value) => !this.showedData.has(value))
     if (this.unshownData.length === 0) {
       alert("Wszystkie dane z pliku JSON zostały wyświetlone");
@@ -97,9 +92,7 @@ export class BlockButtonsComponent implements OnInit {
           }
           break;
         case '3':
-          console.log(this.unshownData)
           const randomElement = this.getRandomElement(this.unshownData);
-          console.log(randomElement)
           this.sharedService.addData(this.findItemById(this.dataFromLocalStorage.data, randomElement).text);
           this.showedData.add(randomElement);
           this.sharedService.setShowedData(randomElement);

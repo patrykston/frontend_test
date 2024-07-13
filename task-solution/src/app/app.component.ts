@@ -18,11 +18,8 @@ export class AppComponent implements OnInit {
   dataFromLocalStorage: any;
 
   ngOnInit(): void {
-    console.log('Data:', this.data)
     localStorage.setItem("data", JSON.stringify(this.data));
-    console.log(localStorage.getItem("data"))
     const d = localStorage.getItem("data")
     this.dataFromLocalStorage = d ? JSON.parse(d) : null;
-    console.log("Data from localStorage", this.dataFromLocalStorage)
   }
 }

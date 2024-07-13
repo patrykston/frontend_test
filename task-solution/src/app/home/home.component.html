@@ -11,7 +11,7 @@
     <div class="card">
         <app-sub-headline title="BLOK Z DŁUGĄ NAZWĄ KTÓRA SAMA SIĘ PRZYTNIE..."></app-sub-headline>
         <div class="card__content">
-        @for (data of dataFromJSON; track data.id) {
+        @for (data of dataFromJSON; track data) {
             <p>{{ data }}</p>
         }
         </div>

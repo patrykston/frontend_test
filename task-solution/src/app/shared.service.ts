@@ -37,7 +37,6 @@ export class SharedService {
     const currentData = this.dataShowed.getValue();
     currentData.add(id);
     this.dataShowed.next(currentData);
-    console.log(this.dataShowed)
   }
 
   resetShowedData() {
