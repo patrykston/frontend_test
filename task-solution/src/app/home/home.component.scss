@@ -25,7 +25,7 @@ app-sub-headline-ellipsis {
     .card {
         flex: 0 0 calc(50% - 16px);
         box-sizing: border-box;
-        padding-top: 1rem;
+        padding-top: 2rem;
         width: 100%;
 
         &__content {
@@ -40,6 +40,14 @@ app-sub-headline-ellipsis {
 
         @include mixins.min-width-breakpoint(768px) {
             flex: 0 0 calc(33.33% - 1rem);
+        }
+
+        @include mixins.min-width-breakpoint(961px) {
+            padding-top: 3rem;
+        }
+
+        @include mixins.min-width-breakpoint(1360px) {
+            padding-top: 4rem;
         }
     }
 }
