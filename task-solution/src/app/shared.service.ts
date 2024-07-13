@@ -31,6 +31,23 @@ export class SharedService {
   addData(text: string) {
     const currentText = this.data.value;
     this.data.next([...currentText, text]);
+
+    setTimeout(() => {
+      const shownData = document.querySelector(".card__content");
+      if (shownData) {
+        const paragraphs: HTMLParagraphElement[] = Array.from(shownData.querySelectorAll("p"));
+
+        paragraphs.sort((a, b) => {
+          const textA = a.textContent?.toLowerCase() || "";
+          const textB = b.textContent?.toLowerCase() || "";
+          return textA.localeCompare(textB);
+        });
+
+        paragraphs.forEach(p => shownData.removeChild(p));
+
+        paragraphs.forEach(p => shownData.appendChild(p));
+      }
+    }, 100);
   }
 
   setShowedData(id: string) {
