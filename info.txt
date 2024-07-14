@@ -1,0 +1,25 @@
+(English)
+All the main goals have been achieved. In addition, the following additional things were accomplished:
+- embedding the entire project in the Angular framework,
+- no image files in the final project (no jpg, gif, png, svg type files),
+- CSS IS AWESOME in the footer - when you hover the mouse, the frame (without text) performs an animated rotation,
+- attempt to apply BEM,
+- logical use of rem, vh units,
+- mobile first, 
+- content in the last block is sorted after the content is pasted,
+- when pasting content in case of inability to meet the condition to be unique, appropriate messages (alert) are displayed,
+- button in the footer ("pokaż") extends the frame without using JS.
+Moreover, the content from the JSON file is loaded once into localStorage and later retrieved from localStorage.
+
+(Polish)
+Wszystkie główne cele udało się zrealizować. Dodatkowo udało się zrealizować następujące dodatkowe rzeczy:
+- osadzenie całego projektu w frameworku Angular,
+- brak plików graficznych w końcowym projekcie (brak plików typu jpg, gif, png, svg),
+- CSS IS AWESOME w footerze - po najechaniu myszką ramka (bez tekstu) wykonuje animowany obrót,
+- próba zastosowania BEM,
+- logiczne wykorzystanie jednostek rem, vh,
+- mobile first, 
+- treści w ostatnim bloku są sortowane po doklejeniu treści,
+- przy doklejaniu treści w przypadku niemożliwości spełnienia warunku by była unikalna wyświetlane są stosowne komunikaty (alert),
+- button w footerze ("pokaż") wysuwa ramkę bez użycia JSa.
+Co więcej treści z pliku JSON ładowane są raz do localStorage i później pobierane z localStorage.
